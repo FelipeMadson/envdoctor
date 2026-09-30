@@ -2,9 +2,9 @@
   "slug": "envdoctor",
   "version": "v1.0.0",
   "archiveFilename": "envdoctor-v1.0.0.tar.gz",
-  "archiveSizeBytes": 35716,
-  "sha256": "d2f6c0ddae9fa1da34c6535b452fe39d9867ff207a4faf0d3037ce1a86525dbd",
+  "archiveSizeBytes": 35714,
+  "sha256": "b36c2193c5f385d0d0944ffd01f2766c8cc2e10935e12b13b3451e6fbc067ae4",
   "filesIncluded": 46,
-  "createdAt": "2026-09-30T15:38:32.129Z",
+  "createdAt": "2026-09-30T15:49:38.333Z",
   "author": "Felipe Madison (@FelipeMadson)"
 }
