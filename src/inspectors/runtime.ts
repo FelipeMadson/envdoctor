@@ -10,13 +10,50 @@ const execFileAsync = promisify(execFile);
 export async function checkRuntime(check: RuntimeCheck): Promise<CheckItemResult> {
   const versionArg = check.command === "python" || check.command === "python3" ? "--version" : "--version";
 
+  const isWin = process.platform === "win32";
+  let stdout = "";
+  let stderr = "";
+
   try {
-    const { stdout, stderr } = await execFileAsync(check.command, [versionArg], {
+    const res = await execFileAsync(check.command, [versionArg], {
       timeout: 3000,
       windowsHide: true
     });
+    stdout = res.stdout;
+    stderr = res.stderr;
+  } catch (err: any) {
+    if (isWin && (err.code === "ENOENT" || err.message?.includes("ENOENT"))) {
+      try {
+        const resWin = await execFileAsync("cmd.exe", ["/d", "/s", "/c", `${check.command} ${versionArg}`], {
+          timeout: 3000,
+          windowsHide: true
+        });
+        stdout = resWin.stdout;
+        stderr = resWin.stderr;
+      } catch (errWin: any) {
+        return {
+          category: "runtime",
+          identifier: check.command,
+          status: check.required ? "FAIL" : "WARN",
+          message: `Comando "${check.command}" não encontrado no PATH do sistema.`,
+          fixCommand: `Instale "${check.command}" e certifique-se de adicioná-lo ao PATH do sistema.`
+        };
+      }
+    } else {
+      const isNotFound = err.code === "ENOENT" || err.message?.includes("ENOENT");
+      return {
+        category: "runtime",
+        identifier: check.command,
+        status: check.required ? "FAIL" : "WARN",
+        message: isNotFound
+          ? `Comando "${check.command}" não encontrado no PATH do sistema.`
+          : `Falha ao inspecionar "${check.command}": ${err.message}`,
+        fixCommand: `Instale "${check.command}" e certifique-se de adicioná-lo ao PATH do sistema.`
+      };
+    }
+  }
 
-    const output = (stdout || stderr).trim();
+  const output = (stdout || stderr).trim();
     const versionMatch = output.match(/(\d+\.\d+(\.\d+)?)/);
     const detectedVersion = versionMatch ? versionMatch[0] : output;
 
@@ -41,18 +78,6 @@ export async function checkRuntime(check: RuntimeCheck): Promise<CheckItemResult
       message: `${check.command} está pronto (${detectedVersion}).`,
       details: check.description
     };
-  } catch (err: any) {
-    const isNotFound = err.code === "ENOENT" || err.message?.includes("ENOENT");
-    return {
-      category: "runtime",
-      identifier: check.command,
-      status: check.required ? "FAIL" : "WARN",
-      message: isNotFound
-        ? `Comando "${check.command}" não encontrado no PATH do sistema.`
-        : `Falha ao inspecionar "${check.command}": ${err.message}`,
-      fixCommand: `Instale "${check.command}" e certifique-se de adicioná-lo ao PATH do sistema.`
-    };
-  }
 }
 
 /**
