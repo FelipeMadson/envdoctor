@@ -1,6 +1,6 @@
 {
   "name": "envdoctor",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Validador e diagnóstico determinístico de ambientes de desenvolvimento local",
   "type": "module",
   "main": "src/index.ts",
