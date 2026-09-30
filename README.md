@@ -1,5 +1,15 @@
 # EnvDoctor 🩺
 
+[![CI Status](https://github.com/FelipeMadson/envdoctor/actions/workflows/ci.yml/badge.svg)](https://github.com/FelipeMadson/envdoctor/actions)
+[![Latest Release](https://img.shields.io/github/v/release/FelipeMadson/envdoctor?color=145e4d&logo=github)](https://github.com/FelipeMadson/envdoctor/releases)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![SemVer 2.0.0](https://img.shields.io/badge/semver-2.0.0-blue.svg)](https://semver.org)
+
+[![CI Status](https://github.com/FelipeMadson/envdoctor/actions/workflows/ci.yml/badge.svg)](https://github.com/FelipeMadson/envdoctor/actions)
+[![Latest Release](https://img.shields.io/github/v/release/FelipeMadson/envdoctor?color=145e4d&logo=github)](https://github.com/FelipeMadson/envdoctor/releases)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![SemVer 2.0.0](https://img.shields.io/badge/semver-2.0.0-blue.svg)](https://semver.org)
+
 > **Validador e diagnóstico determinístico de ambientes de desenvolvimento local.**  
 > Elimine o clássico problema de *"funciona na minha máquina"* antes de executar sua aplicação.
 
@@ -157,3 +167,24 @@ Estudante de Tecnologia em Sistemas para Internet
 ## 📝 Licença
 
 Distribuído sob a licença [MIT](LICENSE).
+
+---
+
+## 🖥️ Demonstração em Terminal Vetorial (Execução & Benchmarks)
+
+<p align="center">
+  <img src="docs/assets/terminal-demo.svg" alt="Terminal Demo - Envdoctor" width="840" />
+</p>
+
+---
+
+## 📦 Polyglot Client SDKs (TypeScript & Python)
+
+SDKs tipados com zero dependências externas em `sdk/`:
+
+```typescript
+import { envdoctorClient } from "./sdk/ts/client.ts";
+const client = new envdoctorClient({ baseUrl: "http://127.0.0.1:3000" });
+const health = await client.checkHealth();
+console.log("Health:", health.status);
+```
