@@ -3,7 +3,7 @@
 > **Validador e diagnóstico determinístico de ambientes de desenvolvimento local.**  
 > Elimine o clássico problema de *"funciona na minha máquina"* antes de executar sua aplicação.
 
-[![Test Suite](https://img.shields.io/badge/tests-100%25%20passing-brightgreen.svg)](#testes)
+[![CI](https://github.com/FelipeMadson/envdoctor/actions/workflows/ci.yml/badge.svg)](https://github.com/FelipeMadson/envdoctor/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20.0.0-green.svg)](https://nodejs.org/)
 
