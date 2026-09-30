@@ -1,11 +1,12 @@
 {
-  "name": "envdoctor",
+  "name": "@felipemadson/envdoctor",
   "version": "1.1.0",
   "description": "Validador e diagnóstico determinístico de ambientes de desenvolvimento local",
   "type": "module",
   "main": "src/index.ts",
   "bin": {
-    "envdoctor": "./bin/envdoctor.js"
+    "envdoctor": "./bin/cli.js",
+    "@felipemadson/envdoctor": "./bin/cli.js"
   },
   "scripts": {
     "test": "node --experimental-strip-types --test tests/**/*.test.ts",
