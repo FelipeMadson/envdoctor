@@ -1,0 +1,99 @@
+{
+  "repoName": "envdoctor",
+  "baseSha": "dfd7a7263762b77bef5800a772d6926d71b4a07f",
+  "diags": [
+    {
+      "category": "readme_audit",
+      "passed": true,
+      "message": "README substantivo verificado (9046 bytes, seções estruturadas presentes).",
+      "details": {
+        "bytes": 9046,
+        "hasTitle": true,
+        "hasUsage": true,
+        "hasDescription": true,
+        "hasPortugueseReadme": true
+      }
+    },
+    {
+      "category": "dependency_pinning",
+      "passed": true,
+      "message": "Todas as dependências possuem versões estritamente fixadas (==).",
+      "details": []
+    },
+    {
+      "category": "vulnerability_audit",
+      "passed": true,
+      "message": "Auditoria de vulnerabilidades limpa: zero avisos de segurança/CVEs.",
+      "details": []
+    },
+    {
+      "category": "acceptance_mapping",
+      "passed": true,
+      "message": "Critérios de aceitação mapeados 1:1 (7/7 critérios, 7 arquivos de teste).",
+      "details": [
+        {
+          "id": "CRIT-01",
+          "description": "Remover sequencias ANSI e calcular largura visual de texto e emojis",
+          "status": "mapped",
+          "testFile": "tests/cli-renderer.test.ts",
+          "testName": "Deve remover sequencias ANSI CSI e OSC sem alterar o texto",
+          "matchedBy": "TEST_NAME_MATCH"
+        },
+        {
+          "id": "CRIT-02",
+          "description": "Carregar manifesto e executar verificações concorrentemente em menos de 2s",
+          "status": "mapped",
+          "testFile": "tests/engine.test.ts",
+          "testName": "deve carregar manifesto e executar verificações concorrentemente em menos de 2s",
+          "matchedBy": "TEST_NAME_MATCH"
+        },
+        {
+          "id": "CRIT-03",
+          "description": "Validar variável presente sem jamais expor o valor secreto no relatório",
+          "status": "mapped",
+          "testFile": "tests/env-vars.test.ts",
+          "testName": "deve validar variável presente sem jamais expor o valor secreto no relatório",
+          "matchedBy": "TEST_NAME_MATCH"
+        },
+        {
+          "id": "CRIT-04",
+          "description": "Fuzzing de invariantes e estabilidade sob concorrência com zero vazamento",
+          "status": "mapped",
+          "testFile": "tests/fuzz.test.ts",
+          "testName": "1. Fuzzing de Invariantes: 1.000 iterações aleatórias sem exceções não tratadas",
+          "matchedBy": "TEST_NAME_MATCH"
+        },
+        {
+          "id": "CRIT-05",
+          "description": "Health probe do sistema reportando status HEALTHY e telemetria válida",
+          "status": "mapped",
+          "testFile": "tests/health-probe.test.ts",
+          "testName": "System Diagnostic Health Probe: Deve reportar status HEALTHY e telemetria válida de memória e uptime",
+          "matchedBy": "TEST_NAME_MATCH"
+        },
+        {
+          "id": "CRIT-06",
+          "description": "Validar portas livres e detectar portas TCP ocupadas com recomendação",
+          "status": "mapped",
+          "testFile": "tests/ports.test.ts",
+          "testName": "deve detectar porta ocupada e emitir recomendação de encerramento de processo",
+          "matchedBy": "TEST_NAME_MATCH"
+        },
+        {
+          "id": "CRIT-07",
+          "description": "Validar e reprovar runtimes com mensagens claras de versão e fixCommand",
+          "status": "mapped",
+          "testFile": "tests/runtime.test.ts",
+          "testName": "deve reprovar comando inexistente com mensagem clara e fixCommand",
+          "matchedBy": "TEST_NAME_MATCH"
+        }
+      ]
+    },
+    {
+      "category": "integration_scripts",
+      "passed": true,
+      "message": "Scripts de integração configurados estritamente sem mascaramento de falhas."
+    }
+  ],
+  "generatedAt": "2026-10-12T11:40:22.390Z"
+}
