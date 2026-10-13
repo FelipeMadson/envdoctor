@@ -8,6 +8,7 @@
     "CRIT-04: Fuzzing de invariantes e estabilidade sob concorrência com zero vazamento",
     "CRIT-05: Health probe do sistema reportando status HEALTHY e telemetria válida",
     "CRIT-06: Validar portas livres e detectar portas TCP ocupadas com recomendação",
-    "CRIT-07: Validar e reprovar runtimes com mensagens claras de versão e fixCommand"
+    "CRIT-07: Validar e reprovar runtimes com mensagens claras de versão e fixCommand",
+    "CRIT-08: Inspecionar recursos de sistema (disco e memória RAM) com limiares determinísticos"
   ]
 }

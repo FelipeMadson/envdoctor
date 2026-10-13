@@ -49,8 +49,7 @@ export async function runCli(args: string[] = process.argv.slice(2)): Promise<vo
 
     case "--help":
     case "-h":
-    case "help":
-    default: {
+    case "help": {
       console.log(`
 🩺 EnvDoctor — Validador Determinístico de Ambientes Dev
 
@@ -67,6 +66,12 @@ Opções:
   --help, -h          Exibe esta mensagem de ajuda
       `);
       process.exit(0);
+      break;
+    }
+
+    default: {
+      console.error(`\n❌ Comando desconhecido: "${command}". Comandos suportados: check, init. Use --help para ver as opções.\n`);
+      process.exit(1);
     }
   }
 }

@@ -4,7 +4,9 @@ import path from "node:path";
 import { DiagnosticEngine } from "../src/core/engine.ts";
 
 describe("EnvDoctor - DiagnosticEngine Ponta a Ponta", () => {
-  const manifestPath = path.join(process.cwd(), "env.manifest.json");
+  const manifestPath = (typeof import.meta.dirname !== 'undefined' && import.meta.dirname)
+    ? path.resolve(import.meta.dirname, "../env.manifest.json")
+    : path.resolve(process.cwd(), "env.manifest.json");
 
   test("deve carregar manifesto e executar verificações concorrentemente em menos de 2s", async () => {
     const engine = new DiagnosticEngine();

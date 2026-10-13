@@ -9,10 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "allowImportingTsExtensions": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "C:\\Users\\felip\\Documents\\github_improvement\\node_modules\\@types"
-    ]
+    "lib": ["ES2024", "ES2022.Intl"]
   },
   "include": [
     "src/**/*",
