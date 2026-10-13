@@ -1,5 +1,8 @@
 # EnvDoctor 🩺
 
+> 🇧🇷 **[Versão em Português](README.pt-BR.md)** | 🇺🇸 **English Version**
+
+
 [![CI Status](https://github.com/FelipeMadson/envdoctor/actions/workflows/ci.yml/badge.svg)](https://github.com/FelipeMadson/envdoctor/actions)
 [![Latest Release](https://img.shields.io/github/v/release/FelipeMadson/envdoctor?color=145e4d&logo=github)](https://github.com/FelipeMadson/envdoctor/releases)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-145e4d?logo=github)](https://felipemadson.github.io/envdoctor/)

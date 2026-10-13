@@ -10,6 +10,7 @@
   },
   "scripts": {
     "test": "node --experimental-strip-types --test tests/**/*.test.ts",
+    "typecheck": "tsc --noEmit",
     "check": "node --experimental-strip-types src/cli.ts check",
     "init": "node --experimental-strip-types src/cli.ts init"
   },
@@ -24,6 +25,6 @@
   "author": "Felipe Madson",
   "license": "MIT",
   "dependencies": {
-    "zod": "^4.6.5"
+    "zod": "3.25.76"
   }
 }

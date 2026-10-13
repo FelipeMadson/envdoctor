@@ -4,5 +4,6 @@ export { checkRuntime } from "./inspectors/runtime.ts";
 export { checkPort } from "./inspectors/ports.ts";
 export { checkEnvVar } from "./inspectors/env-vars.ts";
 export { checkService } from "./inspectors/services.ts";
+export { checkSystemResources, type SystemResourceCheck } from "./inspectors/system-resources.ts";
 export { formatTerminalReport } from "./formatters/terminal.ts";
 export * from "./types.ts";
