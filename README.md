@@ -159,7 +159,7 @@ Os testes cobrem:
 
 ## 👤 Autor
 
-Desenvolvido por **Felipe Madson**  
+Desenvolvido por **Felipe Madison**  
 Estudante de Tecnologia em Sistemas para Internet  
 *Projeto de Engenharia de Software e Ferramentas para Desenvolvedores.*
 
