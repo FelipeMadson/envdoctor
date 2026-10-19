@@ -22,7 +22,7 @@
     "dotenv",
     "tcp-ports"
   ],
-  "author": "Felipe Madson",
+  "author": "Felipe Madison",
   "license": "MIT",
   "dependencies": {
     "zod": "3.25.76"
