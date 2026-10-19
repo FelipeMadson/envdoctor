@@ -166,7 +166,7 @@ Os testes cobrem:
 
 ## 👤 Autor
 
-Desenvolvido por **Felipe Madson**  
+Desenvolvido por **Felipe Madison**  
 Estudante de Tecnologia em Sistemas para Internet  
 *Projeto de Engenharia de Software e Ferramentas para Desenvolvedores.*
 
@@ -244,5 +244,5 @@ Além dos testes unitários determinísticos, a integridade do sistema é contin
 
 ## 🇧🇷 Sobre este Repositório
 
-Este repositório faz parte da vitrine técnica de engenharia de software de **Felipe Madson** (@FelipeMadson).
+Este repositório faz parte da vitrine técnica de engenharia de software de **Felipe Madison** (@FelipeMadson).
 Todos os módulos operam sob o padrão **Local-First**, com testes automatizados executáveis offline, auditoria estrita de dependências e governança de qualidade com diário transacional SQLite WAL.
